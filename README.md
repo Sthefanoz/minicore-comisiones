@@ -2,6 +2,10 @@
 
 Aplicación en Laravel que filtra las ventas por un rango de fechas y calcula la comisión de cada vendedor según tramos de monto.
 
+**Demo en línea:** https://minicore-comisiones.onrender.com
+
+> Está en el plan gratuito de Render: si no ha tenido visitas recientes, la primera carga puede tardar unos 50 segundos.
+
 ## Lógica del core
 
 1. El usuario elige **fecha inicio** y **fecha fin**.
@@ -42,6 +46,10 @@ php artisan serve
 ```
 
 Abre http://127.0.0.1:8000. Los datos de prueba son 5 vendedores con ventas entre el 01/01/2026 y el 11/10/2026.
+
+## Despliegue
+
+Desplegado en Render con Docker (`Dockerfile`, `docker/entrypoint.sh` y `render.yaml`). Al arrancar, el contenedor crea la base de datos SQLite y carga los datos de prueba.
 
 ## Tests
 
